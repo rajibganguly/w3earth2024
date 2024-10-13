@@ -1,0 +1,24 @@
+.headerImage {
+  position: relative;
+  div {
+    margin: 19rem auto;
+    background-color: #2da5eb;
+    display: block;
+    position: relative;
+    width: 100%;
+    font-size: 13rem;
+    text-align: center;
+    font-weight: 800;
+    letter-spacing: -.07em;
+    text-transform: uppercase;
+  }
+  span {
+    position: absolute;
+    top: 105px;
+    text-align: center;
+    width: 100%;
+    font-size: 3rem;
+    font-weight: 100;
+    color: #a09f9f;
+  }
+}

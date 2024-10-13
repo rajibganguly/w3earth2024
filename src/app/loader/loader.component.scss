@@ -1,0 +1,15 @@
+.w3loader {
+  position: fixed;
+  left:0;
+  right:0px;
+  top:0px;
+  bottom: 0px;
+  background-color: #ffffff;
+  color:#333;
+  z-index: 999999;
+  div {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+}

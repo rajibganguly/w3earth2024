@@ -1,0 +1,28 @@
+<nav class="fixed-top">
+  <div class="nav-wrapper nav-bar-light">
+    <div id="nav-desktop">
+      <ul class="left d-none d-sm-block d-none d-md-block  d-lg-block  d-xl-block d-xxl-block">
+        <li *ngFor="let hd of header"><a title="{{hd.text}}" routerLink="{{hd.link}}">
+            {{hd.label}}</a>
+        </li>
+      </ul>
+    </div>
+    <div id="nav-mobile" class="d-block d-sm-none d-sm-block d-md-none">
+      <a class="navbar-toggler-icon d-block d-sm-none d-sm-block d-md-none" (click)="showMenu()" *ngIf="!showMenuFlg">
+        <span></span>
+        <span></span>
+        <span></span>
+      </a>
+      <ul class="mobileMenu" *ngIf="showMenuFlg" (click)="showMenu()">
+        <li *ngFor="let hd of header">
+          <a title="{{hd.text}}" routerLink="{{hd.link}}">
+            {{hd.label}}
+          </a>
+        </li>
+      </ul>
+    </div>
+    <a href="#" class="brand-logo left">
+      w3<span class="w3e">&lt;earth&gt;</span>
+    </a>
+  </div>
+</nav>

@@ -1,0 +1,50 @@
+.wd {
+  width:25px;
+}
+
+nav .nav-wrapper {
+  background-image: linear-gradient(to right, rgba(256,256,256, 0.9), rgba(256,250,250, 0.8), rgba(256,256,256,1));
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  .left {
+    left: 17px
+  }
+
+  .navbar-toggler-icon {
+    position: absolute;
+    top: 23px;
+    right: 0px;
+    width: 30px;
+    span {
+      background: #333;
+      width: 17px;
+      height: 3px;
+      display: block;
+      margin: 0 0px 2px 0;
+      cursor:pointer
+    }
+  }
+}
+
+.mobileMenu {
+  position: absolute;
+  width: 125px;
+  height:100vh;
+  z-index: 9;
+  top: 0;
+  right: 0;
+  background: rgba(211, 177, 249, 0.6);
+  li {
+    position:relative;
+    width:100%;
+    display:block
+  }
+}
+
+
+.w3e {
+  color: #920808;
+  text-shadow: 0 0 3px #fac4c4;
+}

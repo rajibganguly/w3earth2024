@@ -1,0 +1,40 @@
+<div id="advice-api">
+  <p><span class="badge badge-info">Today`s update</span></p>
+<h1 class="p-4">Latest <strong>Finance News</strong></h1>
+  <div class="jumbotron custom-bg-color2" *ngIf="userDetails">
+    <mat-card class="example-card" *ngFor="let user of userDetails">
+      <mat-card-header>
+        <mat-card-title>{{user?.title}}</mat-card-title>
+        <mat-card-subtitle>{{user?.type}} | {{user?.publisher}}</mat-card-subtitle>
+      </mat-card-header>
+      <mat-card-content>
+        <mat-list>
+          <img [src]="user?.thumbnail?.resolutions[0]?.url" [alt]="user?.type">
+        </mat-list>
+        <mat-list>
+          <a mat-button color="primary" [href]="user.link" target="_blank">More Details</a>
+        </mat-list>
+      </mat-card-content>
+    </mat-card>
+
+  </div>
+
+  <mat-card class="pt-1">
+    <mat-card-content>
+      <mat-list-item>
+        <div>
+          <p>Time to see some hot finance update? Please query below details to check what is latest updates.</p>
+          <h6>Search company news </h6>
+          <p><input type="text" class="formControl" [(ngModel)]="companyName" placeholder="Enter company name listed as in BSE/NSE example. Microsoft, Tata" /></p>
+          <p><input type="text" class="formControl" [(ngModel)]="region" placeholder="Enter country name as it belongs to example. US, India" /></p>
+        </div>
+      </mat-list-item>
+    </mat-card-content>
+    <mat-card-actions class="mb-1">
+      <button mat-button color="primary" (click)="nextProfile()">Show it now!</button>
+    </mat-card-actions>
+
+  </mat-card>
+
+
+</div>

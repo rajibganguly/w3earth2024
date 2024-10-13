@@ -1,0 +1,83 @@
+<div class="container-fluid">
+  <app-headbanner></app-headbanner>
+</div>
+
+<section class="text-center container dashboardcont">
+  <div class="row">
+    <div class="col-lg-6 col-md-8 mx-auto">
+      <p>
+        <a href="sms:+918217528181" mat-stroked-button title="Want to send message?" class="special-button1">Message Now</a>
+        <button mat-stroked-button [routerLink]="['/allapps']" title="All available products" class="special-button1"> All Applications</button>
+        <button mat-stroked-button [routerLink]="['/contact']" title="Request for CV" class="special-button1"> Request for CV! </button>
+      </p>
+    </div>
+  </div>
+</section>
+
+<div class="container" *ngIf="cardsDetailsInDashboard">
+  <!-- Dashbaord -->
+  <div class="zambobox">
+    <div class="row">
+      <div class="col-md-3 col-xs-12" *ngFor="let card of cardsDetailsInDashboard">
+        <!-- Card design -->
+        <div class="card card-panel hoverable">
+          <p class="card-title m-3 mb-1"><small>From: </small><strong>{{card.starts}}</strong></p>
+          <small class="badge rounded-pill text-bg-light">{{card.title}}</small>
+          <div class="card-image">
+            <img src="{{card.imagePath}}" class="animate__animated animate__bounce" alt="">
+          </div>
+
+          <div class="d-flex justify-content-between align-content-center">
+            <a [href]="card.link" class="text-primary p-3" [title]="card.nameOfAuthor">Portfolio</a>
+            <a href="#" [routerLink]="card.link2" class="text-success p-3">Details</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <hr />
+    <em>
+      <blockquote [innerHTML]="blockqotetxt"></blockquote>
+    </em>
+  </div>
+</div>
+
+
+<section class="container-fluid valign-wrapper whitebg">
+  <div class="container">
+    <app-sectiontwo></app-sectiontwo>
+  </div>
+</section>
+
+<section class="container-fluid valign-wrapper">
+  <div class="show-myblog">
+    <div class="show-myblog__contain-blog">
+      <div class="show-myblog__contain-blog__element">
+        <img src="../../assets/images/w3earth_free-blog.jpg" alt="Read and share your thought with us"/>
+      </div>
+      <div class="show-myblog__contain-blog__element">
+        <h1>Visit my blog!</h1>
+        <h5>Why should you read?</h5>
+        <ul>
+          <li>Stay current: Blogs often cover trending topics, helping readers stay informed about current events and industry developments.</li>
+          <li>Diverse perspectives: Reading blogs exposes you to different viewpoints and experiences.</li>
+          <li>Different: taste for non-tech reads too.</li>
+        </ul>
+        <a href="https://w3earth.blogspot.com/" mat-stroked-button title="w3earth BLOG, something different!" class="special-button1">w3earth Blog </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="container valign-wrapper">
+    <app-tecnology-tab [techDetails]="techDetails"></app-tecnology-tab>
+</section>
+
+
+<div class="container">
+  <app-sectionone></app-sectionone>
+</div>
+
+
+<div class="route2mail">
+  <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeKBWAUdm7pwwxXtvn7-DZlThT5srl0NKKUwfKpcfw7-8dCLQ/viewform?embedded=true" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+</div>

@@ -1,0 +1,16 @@
+<div class="pad">
+  <h1>{{ title }}</h1>
+  <ng-container *ngIf="techDetails.length > 0">
+    <mat-tab-group animationDuration="2000ms">
+      <div *ngFor="let t of techDetails">
+      <mat-tab [label]="t.label" >
+        <div *ngIf="t.value === 'az7global'" class="padding" innerHtml="{{t.description}}"></div>
+        <div *ngIf="t.value === 'topextnp'" class="padding" innerHtml="{{t.description}}"></div>
+        <div *ngIf="t.value === 'anamitrachatterjee'" class="padding" innerHtml="{{t.description}}"></div>
+        <div *ngIf="t.value === 'incometaxsite'" class="padding" innerHtml="{{t.description}}"></div>
+      </mat-tab>
+    </div>
+    </mat-tab-group>
+  </ng-container>
+  <ng-template #noData>No Data Available</ng-template>
+</div>

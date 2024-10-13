@@ -1,0 +1,411 @@
+@charset "UTF-8";
+
+// Color
+@import "./../node_modules/animate.css/animate.min.css";
+@import "./assets/materialize.scss";
+@import "https://fonts.googleapis.com/icon?family=Material+Icons";
+@import "https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap";
+@import "https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap";
+
+
+//Font Poppins:
+.poppins-thin {
+  font-family: "Poppins", sans-serif !important;
+  font-weight: 100;
+  font-style: normal;
+}
+
+.poppins-extralight {
+  font-family: "Poppins", sans-serif !important;
+  font-weight: 200;
+  font-style: normal;
+}
+
+.poppins-light {
+  font-family: "Poppins", sans-serif !important;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.poppins-regular {
+  font-family: "Poppins", sans-serif !important;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.poppins-medium {
+  font-family: "Poppins", sans-serif !important;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.poppins-semibold {
+  font-family: "Poppins", sans-serif !important;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.poppins-bold {
+  font-family: "Poppins", sans-serif !important;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.poppins-extrabold {
+  font-family: "Poppins", sans-serif !important;
+  font-weight: 800;
+  font-style: normal;
+}
+
+.poppins-black {
+  font-family: "Poppins", sans-serif !important;
+  font-weight: 900;
+  font-style: normal;
+}
+
+.poppins-thin-italic {
+  font-family: "Poppins", sans-serif !important;
+  font-weight: 100;
+  font-style: italic;
+}
+
+.poppins-extralight-italic {
+  font-family: "Poppins", sans-serif !important;
+  font-weight: 200;
+  font-style: italic;
+}
+
+.poppins-light-italic {
+  font-family: "Poppins", sans-serif !important;
+  font-weight: 300;
+  font-style: italic;
+}
+
+.poppins-regular-italic {
+  font-family: "Poppins", sans-serif !important;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.poppins-medium-italic {
+  font-family: "Poppins", sans-serif !important;
+  font-weight: 500;
+  font-style: italic;
+}
+
+.poppins-semibold-italic {
+  font-family: "Poppins", sans-serif !important;
+  font-weight: 600;
+  font-style: italic;
+}
+
+.poppins-bold-italic {
+  font-family: "Poppins", sans-serif !important;
+  font-weight: 700;
+  font-style: italic;
+}
+
+.poppins-extrabold-italic {
+  font-family: "Poppins", sans-serif !important;
+  font-weight: 800;
+  font-style: italic;
+}
+
+.poppins-black-italic {
+  font-family: "Poppins", sans-serif !important;
+  font-weight: 900;
+  font-style: italic;
+}
+
+
+
+/* VARIABLE COLOR */
+$colorWhite: white;
+$colorLightBlue: rgb(240, 240, 240);
+$textColor: #616161;
+@mixin radial-background($col1, $col2) {
+  background: $col1;
+  background: radial-gradient(circle, $col1 0%, $col2 100%);
+
+}
+
+h1 {
+  padding: 2rem;
+  font-family: "Poppins", sans-serif !important;
+  font-weight: 800 !important;
+}
+h2 {
+  font-family: "Poppins", sans-serif !important;
+  font-weight: 500 !important;
+}
+h3 {
+  font-family: "Poppins", sans-serif !important;
+  font-weight: 400 !important;
+}
+h4 {
+  font-family: "Poppins", sans-serif !important;
+  font-weight: 400 !important;
+}
+h5 {
+  font-family: "Poppins", sans-serif !important;
+  font-weight: 400 !important;
+}
+
+body {
+  // font-family: "Raleway", sans-serif;
+  font-family: "Poppins", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 100;
+  font-style: normal;
+}
+
+
+
+/* HEADER CUSTOM SCSS */
+.mt-8 {
+  margin-top:4rem !important;
+}
+
+nav {
+  @extend .indigo, .white;
+  background: none!important;
+  box-shadow: none;
+  .brand-logo {
+    color: $textColor;
+    z-index:1;
+    img {
+      width:170px;
+    }
+  }
+  i.material-icons {
+    display: inline-block;
+    vertical-align: bottom;
+  }
+  ul {
+    li {
+      a {
+        font-size: 1.2rem;
+        color: $textColor;
+        display: inline-block;
+      }
+    }
+  }
+}
+
+/* FOOTER CUSTOM SCSS */
+footer {
+  @extend .indigo, .white;
+  &.page-footer {
+    color: $textColor;
+    .footer-copyright {
+      color: $textColor;
+      a {
+        color: $textColor;
+      }
+    }
+  }
+}
+
+/* ZAMBOBOX CUSTOM SCSS */
+.zambobox {
+  @extend  .grey, .lighten-5;
+  @include radial-background($colorWhite, $colorLightBlue);
+  margin: 5% auto;
+  padding: 2%;
+  .image {
+    width:100%;
+    padding: 1%;
+    @extend .grey, .lighten-3;
+    &:hover {
+      @extend .grey, .lighten-4;
+    }
+  }
+  div.header-sort {
+    width:100%;
+    background: url('https://s3images.coroflot.com/user_files/individual_files/325187_sguVE2imeVWusG0T_dxXfJ9TX.jpg') right 30px no-repeat;
+    h1 {
+      font-size:3rem;
+      line-height: 4rem;
+      width: calc(100% - 350px);
+      /*background:#fff;*/
+      border-radius: 0 0 30% 0;
+      font-weight: 100;
+    }
+  }
+}
+
+/* CUSTOM SCSS */
+html,
+body {
+  height: 100%;
+  @include radial-background($colorWhite, $colorLightBlue);
+  background: url(./assets/images/lightbg.jpg) center top;
+  background-attachment: fixed;
+  h1 {
+    @extend .deep-orange-text, .text-darken-3
+  }
+  .card-panel {
+    padding: 0;
+    @extend .grey, .lighten-3;
+    &.hoverable {
+      @extend .grey, .lighten-4;
+    }
+
+  }
+  .sector-date {
+    color: lighten($textColor, 25);
+    mat-icon {
+      vertical-align: middle;
+    }
+  }
+  p.intTxt {
+    border: 1px solid blueviolet;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 1px 5px inset rgba(210, 229, 232, 0.5);
+    background: rgba(255,255,255, 0.3);
+  }
+  h2.intTxt {
+    color: blueviolet;
+  }
+  .company-figure {
+    h5 {
+      @extend .grey-text, .lighten-4;
+      strong {
+        @extend .deep-orange-text, .text-darken-3;
+      }
+    }
+    .more {
+      border: 1px dashed $textColor;
+      padding: 10px;
+      @extend .grey, .lighten-4;
+      h3 {
+        text-transform: uppercase;
+      }
+      img {
+        width:100%;
+      }
+    }
+    figure {
+      img {
+        width: 100%;
+        padding: 0;
+        margin: 0;
+      }
+      figcaption {
+        border-top: 1px solid #ccc;
+        padding: 10px 0;
+        @extend .grey-text, .lighten-4;
+        strong {
+          @extend .deep-orange-text, .text-darken-3
+        }
+      }
+    }
+  }
+  .boardskill {
+    // background: rgba(0, 0, 0, 1);
+    // animation: morph 9s infinite ease;
+    // transition: animation 5000ms linear;
+  }
+
+  /* (A1) BACKGROUND COLOR SEQUENCE */
+@keyframes morph {
+  0% { background-image: radial-gradient(rgba(0, 0, 0, 1), rgba(38, 5, 5, 0.5), rgb(58, 58, 58)); }
+  50% { background-image: radial-gradient(rgba(0, 0, 0, 1), rgba(4, 64, 76, 0.5), rgb(58, 58, 58)); }
+  100% { background-image: radial-gradient(rgba(0, 0, 0, 1), rgba(149, 2, 2, 0.5), rgb(58, 58, 58)); }
+}
+
+}
+
+.banner-Image-bg {
+  // position: absolute;
+  //   z-index: 0;
+  //   left: 0;
+    // bottom: 39px;
+    width: auto;
+    margin: 0 auto 20px auto;
+}
+
+$padding: 1em;
+
+/* Padding */
+@mixin pad($padposition, $padding) {
+  @if $padposition == top {
+    padding-top: $padding;
+  } @else if $padposition == right {
+    padding-right: $padding;
+  } @else if $padposition == bottom {
+    padding-bottom: $padding;
+  } @else if $padposition == left {
+    padding-left: $padding;
+  } @else if $padposition == x {
+    padding-left: $padding;
+    padding-right: $padding;
+  } @else if $padposition == y {
+    padding-top: $padding;
+    padding-bottom: $padding;
+  }
+}
+
+/* margin */
+@mixin mar($padposition, $padding) {
+  @if $padposition == top {
+    margin-top: $padding;
+  } @else if $padposition == right {
+    margin-right: $padding;
+  } @else if $padposition == bottom {
+    margin-bottom: $padding;
+  } @else if $padposition == left {
+    margin-left: $padding;
+  } @else if $padposition == x {
+    margin-left: $padding;
+    margin-right: $padding;
+  } @else if $padposition == y {
+    margin-top: $padding;
+    margin-bottom: $padding;
+  }
+}
+
+body {
+  margin: 0;
+  font-family: "Raleway", sans-serif;
+  .pad {
+    @include pad(y, 3em);
+  }
+  .mat-stepper-horizontal, .mat-stepper-vertical {
+    background: rgba(255,255,255,0.1);
+  }
+  .mat-step-text-label {
+    font-size:1.5rem;
+  }
+  .special-button1 {
+    font-size: 1.4rem;
+    border-radius: 25px;
+    padding: 0.7rem;
+  }
+}
+
+@media screen and (min-width:100px) {
+  .min-height-page {
+    min-height: 300px;
+  }
+  .page-margin-top {
+    padding-top: 3rem
+  }
+  .page-margin {
+    padding: 0 1rem 1rem 1rem;
+  }
+}
+
+@media screen and (min-width:900px) {
+  .min-height-page {
+    min-height: 100vh;
+  }
+  .page-margin-top {
+    padding-top: 5rem
+  }
+  .page-margin {
+    padding: 0 4rem 4rem 4rem;
+  }
+}
+

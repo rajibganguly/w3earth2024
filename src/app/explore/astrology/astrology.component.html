@@ -1,0 +1,75 @@
+<div>
+  <p><span class="badge badge-info">Astrology</span></p>
+
+  <div class="jumbotron custom-bg-color2">
+    <div class="row">
+      <div class="col-md-6 col-xs-12">
+        <h2>Find Daily Prediction based on Sun Sign!</h2>
+        <p class="lead mb-4">
+          <small>
+            Introducing the Astro Prediction app, your ultimate guide to the stars. Our app utilizes your birth date to
+            provide personalized astrological prediction. From daily horoscopes to love and career advice, our app
+            covers some important aspects of your life. With a user-friendly interface and easy navigation, you can
+            easily access your sun sign, rising sign, and moon sign predictions all together in one place in short. Our
+            app also includes a feature to track your daily planetary transits and their impact on your life, as well as
+            the ability to set reminders for important astrological events. Whether you're a seasoned astrology
+            enthusiast or just starting to explore the stars, the Astro Prediction app has something for everyone.
+            Download now and unlock the secrets of your astrological chart.
+          </small>
+        </p>
+      </div>
+      <div class="col-md-6 col-xs-12">
+        <img src="./../../../assets/images/logo.png" alt="w3earth" />
+        <div class="form-group">
+          <label for="selectRashi">Date of Birth in Between</label>
+          <select id="selectRashi" class="form-control" #selectRashi (change)="changeSelect()">
+            <option selected>DOB found in...</option>
+            <option value="{{z.value}}" *ngFor="let z of zodac">{{z.name}}</option>
+          </select>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-6 col-xs-12">
+        <h2>Find Lucky Number!</h2>
+        <p>
+          In numerology, a lucky number is often associated with a person's birthdate or derived from the numerical values
+           of their name. It's believed that certain numbers carry specific energies or vibrations that can influence a
+           person's life.
+        </p>
+        <h3 class="lead mb-4">
+          <ng-template [ngIf]="finding?.success" [ngIfElse]="elseBlock">
+            {{finding?.body}}
+          </ng-template>
+          <ng-template #elseBlock> Name = ?</ng-template>
+        </h3>
+      </div>
+      <div class="col-md-6 col-xs-12">
+        <img src="./../../../assets/images/logo.png" alt="w3earth" />
+        <div class="form-group">
+          <label for="selectRashi">Your lucky Number</label>
+          <input type="text" class="form-control" placeholder="Enter your first name" #firstName />
+          <button class="btn btn-light" (click)="myLuckyNumber()">Check now!</button>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="lead snowpaper" *ngIf="dataDetails">
+      <h3>Result:</h3>
+      <ol style="font-size:1.1rem">
+        <li>Current Date: <strong>{{dataDetails.current_date}}</strong></li>
+        <li>Compatibility: <strong>{{dataDetails.compatibility}}</strong></li>
+        <li>Lucky Number: <strong>{{dataDetails.lucky_number}}</strong></li>
+        <li>Lucky Time: <strong>{{dataDetails.lucky_time}}</strong></li>
+        <li>Color: <strong>{{dataDetails.color}}</strong></li>
+        <li>Date Range: <strong>{{dataDetails.date_range}}</strong></li>
+        <li>Mood: <strong>{{dataDetails.mood}}</strong></li>
+        <li>Description: <strong>{{dataDetails.description}}</strong></li>
+      </ol>
+    </div>
+
+    <hr class="my-4">
+  </div>
+</div>
