@@ -81,8 +81,14 @@ export class SectiontwoComponent {
       {
         img: './../../../assets/images/clients-logo/cl12.jpg',
         alt: 'PamiTV US.',
-        designation: 'Full Stack Developer',
+        designation: 'Full Stack Development',
         details: 'Angular, Node, Google wallet, Google analytics'
+      },
+      {
+        img: './../../../assets/images/clients-logo/cl13.jpg',
+        alt: 'Safeway',
+        designation: 'Application Development',
+        details: 'NExtjs, React, Angular, Node, Microfrontend'
       }
     ]
   }
