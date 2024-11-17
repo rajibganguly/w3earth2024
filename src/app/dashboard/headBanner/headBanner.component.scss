@@ -2,7 +2,6 @@
   position: relative;
   div {
     margin: 19rem auto;
-    background-color: #2da5eb;
     display: block;
     position: relative;
     width: 100%;
@@ -10,7 +9,6 @@
     text-align: center;
     font-weight: 800;
     letter-spacing: -.07em;
-    text-transform: uppercase;
   }
   span {
     position: absolute;
@@ -21,4 +19,29 @@
     font-weight: 100;
     color: #a09f9f;
   }
+}
+@media screen and (min-width: 100px) and (max-width: 700px) {
+  .headerImage {
+    position: relative;
+    div {
+      margin: 8rem auto;
+        display: block;
+        position: relative;
+        width: 100%;
+        font-size: 3rem;
+        text-align: center;
+        font-weight: 800;
+        letter-spacing: -0.07em;
+    }
+    span {
+      position: absolute;
+        top: 36px;
+        text-align: center;
+        width: 100%;
+        font-size: 1rem;
+        font-weight: 100;
+        color: #a09f9f;
+    }
+  }
+
 }
