@@ -9,6 +9,7 @@ export const environment = {
   rakey: 'f1e0db20e1msh39bd11326d3021cp1fb9b7jsna317b321434a',
   dashboardTechnical: './assets/data/dashboard-technical.json',
   cardDetails: './assets/data/dashboard-carddetails.json',
+  contactDetails: './assets/data/contacts-carddetails.json',
   dashboardCardDetails: '/dashboard-technical/1',
   projectsDetails: './assets/data/projects-details.json',
   introDetails: './assets/data/intro-banner.json',

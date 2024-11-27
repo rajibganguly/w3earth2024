@@ -1,0 +1,42 @@
+[
+  {
+    "data": [
+      {
+        "title": "Paid Internship",
+        "starts": "",
+        "description": "An internship is a short-term work experience offered by an organization to give students and graduates exposure to the working environment, often within a specific industry. It's a great way to gain practical experience, learn new skills, and build professional networks.",
+        "imagePath": "./../../assets/images/zambobox-banner/testimonials8.jpg",
+        "nameOfAuthor": "Behance",
+        "link": "",
+        "link2": ""
+      },
+      {
+        "title": "Support Project",
+        "starts": "$120",
+        "description": "Provide free or discounted tools and services to developers for support project or suggestions on developer forums or programming skills, contribute to open-source projects on platforms or Offer guidance and support to new developers or clients, it could be anything",
+        "imagePath": "./../../assets/images/zambobox-banner/testimonials7.jpg",
+        "nameOfAuthor": "G. Rajib",
+        "link": "",
+        "link2": ""
+      },
+      {
+        "title": "JOB Referral",
+        "starts": "$5",
+        "description": "Referrals can provide you with a direct line to the hiring manager, bypassing traditional application methods. It also help to reach out to friends, family, former colleagues, and alumni who may have connections at companies you're interested in. this makes your application more noticeable.",
+        "imagePath": "./../../assets/images/zambobox-banner/testimonials9.jpg",
+        "nameOfAuthor": "",
+        "link": "",
+        "link2": ""
+      },
+      {
+        "title": "Freelance Interviews",
+        "starts": "$20",
+        "description": "A freelance interview is a meeting or conversation between a potential client and a freelancer to discuss a potential project or collaboration. Freelance interviews are often focused on specific projects, rather than long-term employment. Freelance interviews and preparing effectively, you can increase your chances of landing projects.",
+        "imagePath": "./../../assets/images/zambobox-banner/testimonials6.jpg",
+        "nameOfAuthor": "Coroflot",
+        "link": "",
+        "link2": ""
+      }
+    ]
+  }
+]

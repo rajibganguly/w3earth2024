@@ -35,6 +35,11 @@ export class DataService {
     return this.http.get(this.enviroment.cardDetails);
   }
 
+  // Dashboard page Cards details on top
+  contactcards(): any {
+    return this.http.get(this.enviroment.contactDetails);
+  }
+
   // Lucky number
   getLuckyNumber(str: string) {
     const headers = {

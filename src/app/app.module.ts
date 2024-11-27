@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { CommonModule } from '@angular/common';
 
@@ -23,16 +23,17 @@ import { LoaderComponent } from './loader/loader.component';
 import { DetailserviceComponent } from './detailservice/detailservice.component';
 
 @NgModule({
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
   declarations: [
     AppComponent,
     HeaderComponent,
     DashboardComponent,
+    SectiontwoComponent,
     LoaderComponent,
     AllAppsComponent,
     HeadBannerComponent,
     FooterComponent,
     SectiononeComponent,
-    SectiontwoComponent,
     DirectiveNasaNumbersDirective,
     DetailserviceComponent,
   ],

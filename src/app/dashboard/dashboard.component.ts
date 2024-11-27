@@ -3,6 +3,8 @@ import { map, pipe } from 'rxjs';
 import { CONTACTTITLE, DASHBOARD_TITLE, DASHBOARD_TITLE2 } from '../constant';
 
 import { DataService } from '../data-service.service';
+import { IClientsLogo } from './sectiontwo/sectiontwo.component';
+import { DASHBOARD_CLIENTS_PREVIEW } from '../constants/constant';
 
 @Component({
   selector: 'app-dashboard',
@@ -10,9 +12,11 @@ import { DataService } from '../data-service.service';
   styleUrls: ['./dashboard.component.scss']
 })
 export class DashboardComponent implements OnInit, AfterViewInit {
+  clientsLists: IClientsLogo[];
   cardsDetailsInDashboard: ICardsDetailsInDashboard[] | any;
   techDetails: ITechnologyDetails[] = [];
   canvasboarddata: IIntroData[] = [];
+
   todaysBanner: string = ""
   imageload: boolean = true
   imageArr = [
@@ -28,9 +32,13 @@ export class DashboardComponent implements OnInit, AfterViewInit {
   pageTitle: string = DASHBOARD_TITLE;
   blockqotetxt = `<p>Our customers available form global places like Virginia, Lowa, Washington, Wyoming, Texas, California, Kansas, Florida, Oregon, Des Moines, Boydton, Moses Lake, San Antonio, San Jose, Coffeyville in United States, Singapore, Busan, Inchean in South Korea, Amsterdam, in Netherlands, Helsinki in Finland, Paris in France, London, Manchester, Cardiff, in United Kingdom, Dublin in Ireland, Sydney in Australia and India
 </p>`;
-  constructor(private dataService: DataService) {}
+  constructor(private dataService: DataService) {
+    this.clientsLists = DASHBOARD_CLIENTS_PREVIEW
+  }
 
   ngOnInit(): void {
+
+
     this.getBannerCanvas();
     this.dataService.dashbaordTechnical().subscribe((res: any) => {
       this.techDetails = res[0].data;

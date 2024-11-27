@@ -1,5 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { CONTACTTITLE } from 'src/app/constant';
+import { DASHBOARD_CLIENTS_PREVIEW } from 'src/app/constants/constant';
+import { IClientsLogo } from 'src/app/dashboard/sectiontwo/sectiontwo.component';
+import { DataService } from 'src/app/data-service.service';
 
 
 @Component({
@@ -8,10 +11,14 @@ import { CONTACTTITLE } from 'src/app/constant';
   styleUrls: ['./contact.component.scss']
 })
 export class ContactComponent  {
-
-
-  constructor() { }
   title = CONTACTTITLE;
+  cardsDetailsInContact: any[] | any;
+  constructor(private dataService: DataService) {
+    this.dataService.contactcards().subscribe((res: any) => {
+      this.cardsDetailsInContact = res[0].data;
+    })
+   }
+
 
   downloadCV() {
     let text: string | null = prompt("Please enter skill/s to download CV:", "");

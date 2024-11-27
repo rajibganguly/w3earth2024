@@ -1,43 +1,35 @@
-<div class="p-4 mt-8">
-  <div class="container">
-    <p class="display-4 txt-light" [innerHtml]="title"></p>
+<div class="container">
+  <div class="page-margin-top">
+    <h1>Contact Us</h1>
     <div class="row">
-      <div class="col-md-3 col-xs-12">
-        <figure>
-          <figcaption><strong class="fa2 d-block">STEP1:</strong> Download Resume</figcaption>
-          <figcaption><i class="fa fa-file-pdf-o fa5" aria-hidden="true"></i></figcaption>
-          <button type="button" class="btn btn-info" (click)="downloadCV()">Download CV!</button>
-        </figure>
-      </div>
-      <div class="col-md-3 col-xs-12">
-        <figure>
-          <figcaption><strong class="fa2 d-block">STEP2:</strong> Evalute and Confirm</figcaption>
-          <figcaption><i class="fa fa-podcast fa5" aria-hidden="true"></i></figcaption>
-          <button type="button" class="btn btn-info">Call now!</button>
-        </figure>
-      </div>
-      <div class="col-md-3 col-xs-12">
-        <figure>
-          <figcaption><strong class="fa2 d-block">STEP3:</strong> Process for next</figcaption>
-          <figcaption><i class="fa fa-clock-o fa5" aria-hidden="true"></i></figcaption>
-          <button type="button" class="btn btn-info">Interview scheduled!</button>
-        </figure>
-      </div>
-      <div class="col-md-3 col-xs-12">
-        <figure>
-          <figcaption><strong class="fa2 d-block">STEP4:</strong> Contact and release offer</figcaption>
-          <figcaption><i class="fa fa-id-card-o fa5" aria-hidden="true"></i></figcaption>
-          <button type="button" class="btn btn-info">w3earth@outlook.com!</button>
-        </figure>
+      <div class="col-md-3 col-xs-12" *ngFor="let card of cardsDetailsInContact">
+        <!-- Card design -->
+        <div class="card card-panel hoverable">
+          <div class="card-image">
+            <img src="{{card.imagePath}}" class="animate__animated animate__bounce" alt="">
+          </div>
+          <div class="card-title px-3 pt-3">{{card.title}}</div>
+          <div class="d-flex justify-content-between align-content-center p-3">
+            <p>{{card.description}}</p>
+          </div>
+
+          <!-- <div class="d-flex justify-content-between align-content-center">
+            <a [href]="card.link" class="text-primary p-3" [title]="card.nameOfAuthor">Portfolio</a>
+            <a href="#" [routerLink]="card.link2" class="text-success p-3">Details</a>
+          </div> -->
+        </div>
       </div>
     </div>
     <div class="row">
-      <div class="col-md-4 col-xs-12 bg-warning-subtle">
-        <img src="./../../../../assets/images/contact.jpg" class="img-fluid" alt="" />
-        <!-- <div leaflet options></div> <leaflet [leafletOptions]="{ center: [51.505, -0.09] }"></leaflet> -->
-
+      <div class="col-xl-6 col-md-4 col-xs-12 bg-warning-subtle">
+        <h2 class="d-flex justify-content-center align-items-center">#hireSupport</h2>
+        <!-- <img src="./../../../../assets/images/contact.jpg" class="img-fluid" alt="" /> -->
       </div>
-      <div class="col-md-8 col-xs-12">
+      <div class="col-xl-6 col-md-8 col-xs-12">
+        <figure>
+          <figcaption>Download Resume</figcaption>
+          <figcaption (click)="downloadCV()"><i class="fa fa-file-pdf-o fa5" style="cursor: pointer;" aria-hidden="true"></i></figcaption>
+        </figure>
         <ol>
           <li>
             <h2>Company payroll:</h2>
@@ -59,7 +51,5 @@
         </ol>
       </div>
     </div>
-
-
   </div>
 </div>
