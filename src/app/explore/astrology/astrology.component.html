@@ -2,72 +2,120 @@
   <p><span class="badge badge-info">Astrology</span></p>
 
   <div class="jumbotron custom-bg-color2">
-    <div class="row">
-      <div class="col-md-6 col-xs-12">
-        <h2>Find Daily Prediction based on Sun Sign!</h2>
-        <p class="lead mb-4">
-          <small>
-            Introducing the Astro Prediction app, your ultimate guide to the stars. Our app utilizes your birth date to
-            provide personalized astrological prediction. From daily horoscopes to love and career advice, our app
-            covers some important aspects of your life. With a user-friendly interface and easy navigation, you can
-            easily access your sun sign, rising sign, and moon sign predictions all together in one place in short. Our
-            app also includes a feature to track your daily planetary transits and their impact on your life, as well as
-            the ability to set reminders for important astrological events. Whether you're a seasoned astrology
-            enthusiast or just starting to explore the stars, the Astro Prediction app has something for everyone.
-            Download now and unlock the secrets of your astrological chart.
-          </small>
-        </p>
-      </div>
-      <div class="col-md-6 col-xs-12">
-        <img src="./../../../assets/images/logo.png" alt="w3earth" />
-        <div class="form-group">
-          <label for="selectRashi">Date of Birth in Between</label>
-          <select id="selectRashi" class="form-control" #selectRashi (change)="changeSelect()">
-            <option selected>DOB found in...</option>
-            <option value="{{z.value}}" *ngFor="let z of zodac">{{z.name}}</option>
-          </select>
-        </div>
-      </div>
-    </div>
 
     <div class="row">
       <div class="col-md-6 col-xs-12">
         <h2>Find Lucky Number!</h2>
         <p>
-          In numerology, a lucky number is often associated with a person's birthdate or derived from the numerical values
-           of their name. It's believed that certain numbers carry specific energies or vibrations that can influence a
-           person's life.
+          In numerology, a lucky number is often associated with a person's birthdate or derived from the numerical
+          values
+          of their name. It's believed that certain numbers carry specific energies or vibrations that can influence a
+          person's life. consult us today in srikalp@gmail.com
         </p>
         <h3 class="lead mb-4">
-          <ng-template [ngIf]="finding?.success" [ngIfElse]="elseBlock">
-            {{finding?.body}}
+          <ng-template [ngIf]="finding">
+            Your lucky number is {{finding}}
           </ng-template>
-          <ng-template #elseBlock> Name = ?</ng-template>
         </h3>
+        <p class="text-success"><strong>Predictions:</strong> {{predictionsOfNumber}}</p>
+        <p class="text-primary">{{coutseyLink}}</p>
       </div>
       <div class="col-md-6 col-xs-12">
-        <img src="./../../../assets/images/logo.png" alt="w3earth" />
         <div class="form-group">
           <label for="selectRashi">Your lucky Number</label>
-          <input type="text" class="form-control" placeholder="Enter your first name" #firstName />
-          <button class="btn btn-light" (click)="myLuckyNumber()">Check now!</button>
+          <input type="text" class="form-control" placeholder="Enter your first name or full name" #firstName />
+          <button class="btn btn-light" (click)="myLuckyNumber()">Calculate My Lucky Number!</button>
         </div>
       </div>
     </div>
 
+    <hr class="my-4">
+  </div>
+</div>
 
-    <div class="lead snowpaper" *ngIf="dataDetails">
-      <h3>Result:</h3>
-      <ol style="font-size:1.1rem">
-        <li>Current Date: <strong>{{dataDetails.current_date}}</strong></li>
-        <li>Compatibility: <strong>{{dataDetails.compatibility}}</strong></li>
-        <li>Lucky Number: <strong>{{dataDetails.lucky_number}}</strong></li>
-        <li>Lucky Time: <strong>{{dataDetails.lucky_time}}</strong></li>
-        <li>Color: <strong>{{dataDetails.color}}</strong></li>
-        <li>Date Range: <strong>{{dataDetails.date_range}}</strong></li>
-        <li>Mood: <strong>{{dataDetails.mood}}</strong></li>
-        <li>Description: <strong>{{dataDetails.description}}</strong></li>
-      </ol>
+
+<div>
+  <p><span class="badge badge-info">Users available</span></p>
+
+  <div class="jumbotron custom-bg-color2">
+
+    <div class="row">
+      <div class="col-md-6 col-xs-12">
+        <h2>Get Random users!</h2>
+        <p>
+          We're excited to provide you with test credentials to explore the capabilities of our application.
+          These credentials are for testing purposes only and should not be used for testing and development environments.
+          Once you've completed your testing/development, please let us know if you have any feedback or require further assistance.
+          Encourage the recipient to provide feedback or ask questions.
+        </p>
+        <ng-template [ngIf]="randomUsers">
+          <ng-template [ngIf]="randomUsers?.info">
+            <p>Version: {{randomUsers?.info?.version}}</p>
+          </ng-template>
+          <ng-template [ngIf]="randomUsers?.results">
+            <div class="card" *ngFor="let user of randomUsers?.results">
+              <div class="card-header">
+                <h5 class="card-title pt-3">{{ user?.name?.title }} {{ user?.name?.first }} {{ user?.name?.last }}
+                </h5>
+              </div>
+              <div class="card-body">
+                <img [src]="user?.picture?.thumbnail" class="card-img-top" alt="Profile Picture">
+                <div class="p-3 d-flex justify-content-between align-items-center">
+                  <div>
+                    <strong>User Info</strong>
+                  <p class="card-text">
+                    Email: {{ user?.email }}
+                  </p>
+                  <p class="card-text">
+                    Mobile: {{ user?.cell }}
+                  </p>
+                  <p class="card-text">
+                    Date of Birth: {{ user?.dob?.date | date:'mediumDate' }} (Age: {{ user?.dob?.age }})
+                  </p>
+                  </div>
+                  <div>
+                    <span *ngIf="user?.gender === 'male'">
+                      <i class="fa fa-mars fa-3x"></i>
+                    </span>
+                    <span *ngIf="user?.gender === 'female'">
+                      <i class="fa fa-venus fa-3x"></i>
+                    </span>
+                  </div>
+                </div>
+                <div class="p-3 bg-primary text-white">
+                  <strong>Address</strong>
+                  <p class="card-text" *ngIf="user?.location?.street">
+                    {{ user?.location?.street?.number }} {{ user?.location?.street?.name }} <br>
+                    {{ user?.location?.country }} {{ user?.location?.state }} {{ user?.location?.city }} {{
+                    user?.location?.postcode }} <br>
+                  </p>
+                </div>
+                <div class="p-3">
+                  <strong>Timezone</strong>
+                  <p class="card-text" *ngIf="user?.location?.timezone">
+                    {{ user?.location?.timezone?.description }}
+                  </p>
+                </div>
+                <div class="p-3 bg-info text-dark">
+                  <strong>Registed</strong>
+                  <p class="card-text" *ngIf="user?.registered">
+                    {{ user?.registered?.date | date:'mediumDate' }}
+                  </p>
+                </div>
+
+              </div>
+            </div>
+          </ng-template>
+        </ng-template>
+      </div>
+      <div class="col-md-6 col-xs-12">
+        <p>
+          By following these guidelines, you can create effective testing credential emails that are both informative and professional.
+        </p>
+        <div class="form-group">
+          <button class="btn btn-light" (click)="getRandomUser()">Get user!</button>
+        </div>
+      </div>
     </div>
 
     <hr class="my-4">

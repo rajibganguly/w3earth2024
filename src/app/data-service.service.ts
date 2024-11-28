@@ -41,12 +41,12 @@ export class DataService {
   }
 
   // Lucky number
-  getLuckyNumber(str: string) {
+  getRandomuserList() {
     const headers = {
       'Access-Control-Allow-Origin': '*',
-      'Access-Control-Allow-Methods': 'POST'
+      'Access-Control-Allow-Methods': 'GET'
     }
-    return this.http.post(`${this.enviroment.host}/luckyNumber/${str}`,{headers: headers})
+    return this.http.get(`https://randomuser.me/api/`,{headers: headers})
   }
 
   // Dashboard page Cards details on top
