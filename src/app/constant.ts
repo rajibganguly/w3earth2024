@@ -51,8 +51,8 @@ export const CONTACTTITLE = "";
 export const DASHBOARD_TITLE =
   'Front End (like Html. CSS, SASS, Bootstrap, Angular Js, ReactJs or Angular) with Cloud Back-end Service (like Kinvey/ Firebase/ AWS Amplify) and some essencial version control, reporting, SVG/Canvas, requirements management, project management (like Azure DevOps, Gitlab) to work. A journey from story board, persona, create HFM to Angular REST API, Node, Back end service, SPA to PWA!';
 export const DASHBOARD_ADDITIONAL_INVOLVEMENT_TITLE = 'Hobbies and passion';
-export const DASHBOARD_BEST_CLIENTS_LOG = 'Gratitude for the work';
-export const DASHBOARD_TECHNICAL_TITLE = 'Recent works';
+export const DASHBOARD_BEST_CLIENTS_LOG = 'Proven track record with global brands';
+export const DASHBOARD_TECHNICAL_TITLE = 'Discover How We Can Elevate Your Digital Presence';
 export const DASHBOARD_TITLE2 =
   'A UX-UI designer and developer, ';
 
