@@ -33,7 +33,6 @@ export class ProjectDashbaordComponent implements OnInit, OnDestroy {
 
     this.dservice.companiesAll().subscribe((res: any) => {
       this.companiesAll = [...res];
-      console.log('companiesAll ==>', this.companiesAll[0]);
       return this.companiesAll;
     })
   }
