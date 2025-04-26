@@ -6,9 +6,9 @@
   <div class="row">
     <div class="col-lg-6 col-md-8 mx-auto">
       <p>
-        <a href="sms:+918217528181" mat-stroked-button title="Want to send message?" class="special-button1">Message Now</a>
-        <button mat-stroked-button [routerLink]="['/allapps']" title="All available products" class="special-button1"> All Applications</button>
-        <button mat-stroked-button [routerLink]="['/contact']" title="Request for CV" class="special-button1"> Request for CV! </button>
+        <a href="sms:+918217528181" title="Want to send message?" class="btn btn-primary mr-1">Message Now</a>
+        <button [routerLink]="['/allapps']" title="All available products" class="btn btn-secondary mr-1"> All Applications</button>
+        <button [routerLink]="['/contact']" title="Request for CV" class="btn btn-secondary"> Request for CV! </button>
       </p>
     </div>
   </div>
@@ -18,6 +18,7 @@
   <!-- Dashbaord -->
   <div class="zambobox">
     <div class="row">
+      <h1>We provide following services</h1>
       <div class="col-md-3 col-xs-12" *ngFor="let card of cardsDetailsInDashboard">
         <!-- Card design -->
         <div class="card card-panel hoverable">
@@ -40,13 +41,11 @@
       <div>
         <p class="px-3">Internships provide numerous benefits for students and young professionals, enhancing their educational experience and preparing them
            for future career opportunities.  internships contribute to personal development by exposing students to diverse work environments and
-           challenges. This exposure helps them build resilience and adaptability, traits that are essential in today’s dynamic job market.</p>
+           challenges. This exposure helps them build resilience and adaptability, traits that are essential in today's dynamic job market.</p>
         <div class="row">
           <div class="col-xl-6 col-xs-12">
             <img src="./../../assets/images/zambobox-banner/internbanner.jpg" class="img-fluid" alt="paid internship" />
-      <!-- <em>
-        <blockquote [innerHTML]="blockqotetxt"></blockquote>
-      </em> -->
+      
           </div>
           <div class="col-xl-6 col-xs-12">
             <ol>
@@ -57,7 +56,7 @@
                 critical competencies such as teamwork, communication, problem-solving, and time management through their internship experiences</li>
               <li><strong>Enhanced Employability:</strong> Having internship experience can greatly improve a candidate's employability. Employers often prefer
                 graduates with practical experience as it indicates that candidates possess both knowledge and the ability to operate effectively within a workplace</li>
-              <li>For more details or official enquery please mail to us on <a href="mailto:w3earth@outlook.com">w3earth@outlook.com</a>.</li>
+              <li>For more details or official enquery please mail to us on <a href="mailto:w3earth@outlook.com">w3earth[At]outlook.com</a>.</li>
             </ol>
           </div>
         </div>
