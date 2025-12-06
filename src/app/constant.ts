@@ -65,8 +65,8 @@ export const DASHBOARD_PARAGRAPH_QUOTE = `
 export const SECTIONONE_CONTENT = [
   {
     icon: 'tonality',
-    caption: 'Cartonist',
-    details: 'As a visual artist I specializes in both drawing and writing cartoons, started earlier in 1996 with a local paper "pravat Khabar". In the year 1999 first I introcuce new charector as Alpelibe in Shaheri news paper. Some are here <a href="https://www.coroflot.com/w3earth/Cartoon">coroflot.com/w3earth</a>'
+    caption: 'Fine Art',
+    details: 'As a visual artist I specializes in both drawing and writing, cartoons, started earlier in 1996 with a local paper "pravat Khabar". In the year 1999 first I introcuce new charector as Alpelibe in Shaheri news paper. Some are here <a href="https://www.coroflot.com/w3earth/Cartoon">coroflot.com/w3earth</a>'
   },
   {
     icon: 'swap_calls',
